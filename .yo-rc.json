@@ -1,0 +1,16 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "version": "1.14.0",
+    "libraryName": "it-assest-software-licece-tracker-management-system",
+    "libraryId": "27c27b4d-20a8-4d8f-99f2-8286f8602820",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "it-assest-software-licece-tracker-management-system",
+    "solutionShortDescription": "it-assest-software-licece-tracker-management-system description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

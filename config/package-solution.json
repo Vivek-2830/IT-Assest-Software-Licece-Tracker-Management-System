@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "it-assest-software-licece-tracker-management-system-client-side-solution",
+    "id": "27c27b4d-20a8-4d8f-99f2-8286f8602820",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.14.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "it-assest-software-licece-tracker-management-system description"
+      },
+      "longDescription": {
+        "default": "it-assest-software-licece-tracker-management-system description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "it-assest-software-licece-tracker-management-system Feature",
+        "description": "The feature that activates elements of the it-assest-software-licece-tracker-management-system solution.",
+        "id": "e2ac03eb-32cb-4377-8668-4fc968fc4f77",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/it-assest-software-licece-tracker-management-system.sppkg"
+  }
+}

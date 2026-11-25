@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "it-asset-tracker-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/itAssetTracker/ItAssetTrackerWebPart.js",
+          "manifest": "./src/webparts/itAssetTracker/ItAssetTrackerWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ItAssetTrackerWebPartStrings": "lib/webparts/itAssetTracker/loc/{locale}.js"
+  }
+}
