@@ -19,7 +19,9 @@ export const AssetList: React.FC<IScreenProps> = ({ role, go, view }) => {
 
   if (loading && !data) { return <Busy />; }
   const all: IAsset[] = data || [];
-  const holders = Array.from(new Set(all.filter(a => a.CurrentHolder).map(a => a.CurrentHolder!.Title))).sort();
+  const holders = all.filter(a => a.CurrentHolder).map(a => a.CurrentHolder!.Title)
+  .filter((n, i, arr) => arr.indexOf(n) === i).sort();
+  // const holders = Array.from(new Set(all.filter(a => a.CurrentHolder).map(a => a.CurrentHolder!.Title))).sort();
   const sw = (s?: string): boolean => !!s && s.toLowerCase().indexOf(q.trim().toLowerCase()) === 0;   // starts-with per spec
 
   let rows = all.filter(a =>
