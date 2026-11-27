@@ -1,0 +1,23 @@
+.dashboard { padding: 20px 4px 4px; }
+.sectionHeading {
+  display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px;
+  h2 { margin: 0 0 4px; font-size: 20px; color: #172b4d; }
+  p { margin: 0; color: #778397; font-size: 13px; }
+}
+.refreshButton { border: 1px solid #cbd5e1; background: #fff; color: #344054; border-radius: 5px; padding: 8px 14px; cursor: pointer; font-weight: 600; }
+.refreshButton:hover { background: #f2f6fb; }
+.loading { padding: 55px 0; }
+.metricGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.metricCard { background: #fff; border: 1px solid #e7ebf0; border-radius: 8px; padding: 18px; box-shadow: 0 2px 6px rgba(25,42,70,.04); }
+.metricTop { display: flex; align-items: center; gap: 10px; }
+.metricIcon { font-size: 19px; }
+.metricLabel { font-size: 13px; color: #697586; }
+.metricValue { font-size: 30px; line-height: 38px; font-weight: 700; color: #172b4d; margin-top: 13px; }
+.bottomGrid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 14px; margin-top: 16px; }
+.panel { background: #fff; border: 1px solid #e7ebf0; border-radius: 8px; padding: 18px; }
+.panel h3 { margin: 0 0 15px; font-size: 15px; color: #253858; }
+.panel p { color: #778397; font-size: 13px; margin: 5px 0 0; }
+.statusRow { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid #f0f2f5; color: #667085; font-size: 13px; }
+.statusRow strong { color: #253858; }
+.attentionNumber { font-size: 38px; color: #d45a43; font-weight: 700; }
+@media (max-width: 700px) { .metricGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .bottomGrid { grid-template-columns: 1fr; } }

@@ -1,7 +1,6 @@
-export interface IItAssetTrackerProps {
+import { WebPartContext } from '@microsoft/sp-webpart-base';
+
+export interface IITAssetTrackerProps {
+  context: WebPartContext;
   description: string;
-  isDarkTheme: boolean;
-  environmentMessage: string;
-  hasTeamsContext: boolean;
-  userDisplayName: string;
 }

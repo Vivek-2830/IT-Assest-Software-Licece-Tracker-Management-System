@@ -6,22 +6,30 @@ import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 
 import * as strings from 'ItAssetTrackerWebPartStrings';
 import ItAssetTracker from './components/ItAssetTracker';
-import { IItAssetTrackerProps } from './components/ItAssetTracker';
-import { DataService } from './services/DataService';
+import { sp } from '@pnp/sp';
+import '@pnp/sp/webs';
+import '@pnp/sp/lists';
+import '@pnp/sp/items';
+import '@pnp/sp/site-users/web';
+import { IITAssetTrackerProps } from './components/IItAssetTrackerProps';
+import ITAssetTracker from './components/ItAssetTracker';
+
 
 export interface IItAssetTrackerWebPartProps {
-  appTitle: string;
+  description: string;
 }
 
 export default class ItAssetTrackerWebPart extends BaseClientSideWebPart<IItAssetTrackerWebPartProps> {
-  protected onInit(): Promise<void> {
-    DataService.init(this.context);
-    return super.onInit();
+    public onInit(): Promise<void> {
+    return super.onInit().then(() => {
+      sp.setup({ spfxContext: this.context });
+    });
   }
 
   public render(): void {
-    const element: React.ReactElement<IItAssetTrackerProps> = React.createElement(ItAssetTracker, {
-      appTitle: this.properties.appTitle || 'IT Asset & Software Licence Tracker'
+    const element: React.ReactElement<IITAssetTrackerProps> = React.createElement(ITAssetTracker, {
+      context: this.context,
+      description: this.properties.description
     });
     ReactDom.render(element, this.domElement);
   }
